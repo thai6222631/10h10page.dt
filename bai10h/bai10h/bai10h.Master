@@ -1,0 +1,121 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="bai10h.master.vb" Inherits="bai10h.bai10h" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>LMHT</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <link href="10h10.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <!--header-->
+    <div onmouseover="hideNavSup()" class=" grid header">
+        <div class="header-img row">
+            <img class="col l-12 m-12 c-12" src="https://cdn.vn.garenanow.com/web/lol-product/home/images/Lan_h3lpm3/10_2021/076-KV-ChienBinhRong-1220x400.png"  />
+        </div>
+    </div>
+    <!--menuPC-->
+    <div class="nav">
+        <ul class="nav-main">
+
+            <li onmouseover="hideNavSup()" class="logo"><img src="https://tinesports.com/wp-content/uploads/2019/09/LMHT-Riot-Games-C%C3%B4ng-B%E1%BB%91-Logo-M%E1%BB%9Bi-C%E1%BB%A7a-Li%C3%AAn-Minh-Huy%E1%BB%81n-Tho%E1%BA%A1i-3-750x430.jpg" style="height:100%;width:100%" /></li>
+            <li onmouseover="showNavSup()" class="section tintucsection js-tintucsection "><a href="#">TIN TỨC</a></li>
+            <li onmouseover="showNavSup()" class="section"><a href="#">GIỚI THIỆU</a></li>
+            <li onmouseover="hideNavSup()" class="section"><a href="#">ESPORTS</a></li>
+            <li onmouseover="hideNavSup()" class="section"><a href="#">HỖ TRỢ</a></li>
+            <li onmouseover="hideNavSup()" class="section"><a href="#">TẢI GAME</a></li>
+            <li onmouseover="hideNavSup()" class="section"><a href="#">NẠP THẺ</a></li>
+        </ul>
+        <div class="nav-sup js-nav-sup ">
+        <ul class="sup-tintuc">
+            <li>TIN TỨC</li>
+            <li>SỰ KIỆN</li>
+            <li>TIN GAME</li>
+            <li>ESPORTS</li>
+            <li>CỘNG ĐỒNG</li>
+            <li>CẨM NANG</li>
+            <li>VŨ TRỤ</li>
+        </ul>
+        <ul class="sup-gioithieu" >
+            <li>GIỚI THIỆU</li>
+            <li>TƯỚNG</li>
+            <li>TRANG BỊ</li>
+            
+        </ul>
+      
+
+        </div>
+    
+    </div>
+     <!--menuIadMobile-->
+    <div class="nav-ipad">
+                   
+        <div class="nav-main-ipad">
+            <div class="logoimg">
+            <img class="logo" src="https://tinesports.com/wp-content/uploads/2019/09/LMHT-Riot-Games-C%C3%B4ng-B%E1%BB%91-Logo-M%E1%BB%9Bi-C%E1%BB%A7a-Li%C3%AAn-Minh-Huy%E1%BB%81n-Tho%E1%BA%A1i-3-750x430.jpg"  />
+            <label  for="nav-mobile-input" class="logo-open-nav">                
+                <svg class="icon-close"  aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"  role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+            </label>
+            </div>  
+                    <input hidden type="checkbox" name="" class="nav-input" id="nav-mobile-input" />   
+                    <label  for="nav-mobile-input" class="nav-overplay"></label>
+                <ul class="nav-ipad-section" >
+                    <li  class="close-nav-ipad-section">
+                        <img class="logo" src="https://tinesports.com/wp-content/uploads/2019/09/LMHT-Riot-Games-C%C3%B4ng-B%E1%BB%91-Logo-M%E1%BB%9Bi-C%E1%BB%A7a-Li%C3%AAn-Minh-Huy%E1%BB%81n-Tho%E1%BA%A1i-3-750x430.jpg"  />
+                        <label  for="nav-mobile-input" class="icon-close-nav-ipad">
+                            <svg style="color:#c19e68;border-radius:50%;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times-circle" class="svg-inline--fa fa-times-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"></path></svg>
+                        </label>
+                    </li>
+                    <li  class="section-nav section-nav-tintuc" >
+                        <a  href="#">TIN TỨC
+                        <ul class="sup-section-ipad sup-tintuc-ipad js-sup-tintuc-ipad">
+                            <li>TIN TỨC</li>
+                            <li>SỰ KIỆN</li>
+                            <li>TIN GAME</li>
+                            <li>ESPORTS</li>
+                            <li>CỘNG ĐỒNG</li>
+                            <li>CẨM NANG</li>
+                            <li>VŨ TRỤ</li>
+                        </ul>
+                        </a>
+                    </li>
+                    <li  class="section-nav section-nav-gioithieu" >
+                        <a href="#">GIỚI THIỆU</a>
+                        <ul class="sup-section-ipad sup-gioithieu-ipad">
+                            <li>GIỚI THIỆU</li>
+                            <li>TƯỚNG</li>
+                            <li>TRANG BỊ</li>
+                            
+                        </ul>
+                    </li>
+                    <li  class="section-nav"><a href="#">ESPORTS</a></li>
+                    <li  class="section-nav"><a href="#">HỖ TRỢ</a></li>                    
+                    <li  class="section-nav"><a href="#">NẠP THẺ</a></li>
+                 </ul>
+        </div>                    
+                    
+    </div>
+
+<script>
+    const navSup = document.querySelector('.js-nav-sup')
+    const tinTUC = Document.querySelector('.js-tintucsection')
+
+    function showNavSup() {
+        navSup.classList.add('open')
+    }
+    function hideNavSup() {
+        navSup.classList.remove('open')
+    }
+
+</script>
+</body>
+</html>
